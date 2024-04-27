@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Élèves - École Pascal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Élèves - École Pascal</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="apropos.html">À Propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="eleves.html">Élèves</a></li>
+        </ul>
+    </nav>
+    <section id="emploi-du-temps">
+        <h2>Sélectionnez votre classe :</h2>
+        <select id="classe" onchange="afficherEmploiDuTemps()">
+            <option value="">-- Sélectionnez une classe --</option>
+            <option value="seconde1">Seconde 1</option>
+            <option value="seconde2">Seconde 2</option>
+            <option value="seconde3">Seconde 3</option>
+        </select>
+        <div id="emploi-du-temps-container"></div>
+    </section>
+    <footer>
+        <p>&copy; 2024 École Pascal. Tous droits réservés.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
