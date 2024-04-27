@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Élèves - École Pascal</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styles pour agrandir les liens */
+        nav ul li a {
+            font-size: 1.2em; /* Augmente la taille du texte */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,9 +24,21 @@
             <li><a href="eleves.html">Élèves</a></li>
         </ul>
     </nav>
+    <section id="selection-classe">
+        <h2>Choisissez votre classe :</h2>
+        <select id="classe" onchange="afficherEmploiDuTemps()">
+            <option value="">Sélectionnez une classe</option>
+            <option value="seconde1">Seconde 1</option>
+            <option value="seconde2">Seconde 2</option>
+            <option value="seconde3">Seconde 3</option>
+        </select>
+    </section>
     <section id="emploi-du-temps">
-        <h2>Emploi du temps de la Seconde 2</h2>
+        <div id="emploi-du-temps-seconde1" style="display: none;">
+            <!-- Contenu de l'emploi du temps pour la Seconde 1 -->
+        </div>
         <div id="emploi-du-temps-seconde2" style="display: none;">
+            <h2>Emploi du temps de la Seconde 2</h2>
             <div class="jour">
                 <h3>Lundi</h3>
                 <ul>
@@ -33,49 +51,53 @@
                     <li>17h - 18h : Vie de classe</li>
                 </ul>
             </div>
-        <div class="jour">
-            <h3>Mardi</h3>
-            <ul>
-                <li>8h - 10h : DST</li>
-                <li>10h - 12h : Anglais</li>
-                <li>12h - 13h : Pause</li>
-                <li>13h - 14h : LV2</li>
-                <li>14h - 15h : SES</li>
-                <li>15h - 16h30 : Français</li>
-            </ul>
+            <div class="jour">
+                <h3>Mardi</h3>
+                <ul>
+                    <li>8h - 10h : DST</li>
+                    <li>10h - 12h : Anglais</li>
+                    <li>12h - 13h : Pause</li>
+                    <li>13h - 14h : LV2</li>
+                    <li>14h - 15h : SES</li>
+                    <li>15h - 16h30 : Français</li>
+                </ul>
+            </div>
+            <div class="jour">
+                <h3>Mercredi</h3>
+                <ul>
+                    <li>8h - 10h : Sport</li>
+                    <li>10h - 11h : Anglais</li>
+                    <li>11h - 12h30 : SNT</li>
+                    <li>12h30 - 13h30 : Pause</li>
+                    <li>13h30 - 14h30 : Histoire</li>
+                </ul>
+            </div>
+            <div class="jour">
+                <h3>Jeudi</h3>
+                <ul>
+                    <li>8h - 9h : Français</li>
+                    <li>9h - 11h : Mathématiques</li>
+                    <li>11h - 12h : Anglais</li>
+                    <li>12h - 14h : Pause</li>
+                    <li>14h - 15h30 : Physique</li>
+                    <li>15h30 - 16h : Pause</li>
+                    <li>16h - 17h : LV2</li>
+                </ul>
+            </div>
+            <div class="jour">
+                <h3>Vendredi</h3>
+                <ul>
+                    <li>9h - 10h : Histoire</li>
+                    <li>10h - 11h : Mathématiques</li>
+                    <li>11h - 12h : LV2</li>
+                    <li>12h - 14h : Pause</li>
+                    <li>14h - 15h : Mathématiques</li>
+                    <li>15h - 16h : LV2</li>
+                </ul>
+            </div>
         </div>
-        <div class="jour">
-            <h3>Mercredi</h3>
-            <ul>
-                <li>8h - 10h : Sport</li>
-                <li>10h - 11h : Anglais</li>
-                <li>11h - 12h30 : SNT</li>
-                <li>12h30 - 13h30 : Pause</li>
-                <li>13h30 - 14h30 : Histoire</li>
-            </ul>
-        </div>
-        <div class="jour">
-            <h3>Jeudi</h3>
-            <ul>
-                <li>8h - 9h : Français</li>
-                <li>9h - 11h : Mathématiques</li>
-                <li>11h - 12h : Anglais</li>
-                <li>12h - 14h : Pause</li>
-                <li>14h - 15h30 : Physique</li>
-                <li>15h30 - 16h : Pause</li>
-                <li>16h - 17h : LV2</li>
-            </ul>
-        </div>
-        <div class="jour">
-            <h3>Vendredi</h3>
-            <ul>
-                <li>9h - 10h : Histoire</li>
-                <li>10h - 11h : Mathématiques</li>
-                <li>11h - 12h : LV2</li>
-                <li>12h - 14h : Pause</li>
-                <li>14h - 15h : Mathématiques</li>
-                <li>15h - 16h : LV2</li>
-            </ul>
+        <div id="emploi-du-temps-seconde3" style="display: none;">
+            <!-- Contenu de l'emploi du temps pour la Seconde 3 -->
         </div>
     </section>
     <footer>
