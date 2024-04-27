@@ -8,7 +8,7 @@
     <style>
         /* Styles pour agrandir les liens */
         nav ul li a {
-            font-size: 1.2em; /* Augmente la taille du texte */
+            font-size: 20px; /* Augmente la taille du texte */
         }
     </style>
 </head>
@@ -103,6 +103,25 @@
     <footer>
         <p>&copy; 2024 École Pascal. Tous droits réservés.</p>
     </footer>
-    <script src="script.js"></script>
+    <script>
+        function afficherEmploiDuTemps() {
+            var classe = document.getElementById("classe").value;
+            var seconde1 = document.getElementById("emploi-du-temps-seconde1");
+            var seconde2 = document.getElementById("emploi-du-temps-seconde2");
+            var seconde3 = document.getElementById("emploi-du-temps-seconde3");
+            
+            seconde1.style.display = "none";
+            seconde2.style.display = "none";
+            seconde3.style.display = "none";
+            
+            if (classe === "seconde1") {
+                seconde1.style.display = "block";
+            } else if (classe === "seconde2") {
+                seconde2.style.display = "block";
+            } else if (classe === "seconde3") {
+                seconde3.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
