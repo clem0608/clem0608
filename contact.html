@@ -4,11 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - École Pascal</title>
-    <style>
-        nav ul li a {
-            font-size: 20px;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -22,12 +17,27 @@
         </ul>
     </nav>
     <section id="contact">
-        <h2>Contact</h2>
+        <h2>Informations de contact</h2>
         <p>Vous pouvez nous contacter à tout moment pour toute question, commentaire ou demande d'information supplémentaire :</p>
         <p>Adresse : 33 boulevard Lannes, 75016 Paris</p>
         <p>Téléphone : +33 1 23 45 67 89</p>
         <p>Email : <a href="mailto:contact@ecolepascal.com">contact@ecolepascal.com</a></p>
     </section>
+    
+    <section id="formulaire">
+        <h2>Envoyer un message</h2>
+        <form action="mailto:rondouxclement@gmail.com" method="POST" enctype="text/plain">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required><br><br>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Message :</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+            <input type="submit" value="Envoyer">
+            <input type="reset" value="Effacer">
+        </form>
+    </section>
+    
     <footer>
         <p>&copy; 2024 École Pascal. Tous droits réservés.</p>
     </footer>
